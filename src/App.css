@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  /*background-image: linear-gradient(to top, #eaafc8, #e398c5, #d683c7, #c371cd, #a662d5, #955dd9, #8159de, #6756e3, #6756e3, #6756e3, #6756e3, #6756e3);*/
+  background-image: linear-gradient(to top, #9d6eb2, #9968b9, #9263c0, #8a5ec8, #7f5ad0, #7756d5, #6e52da, #634fdf, #5d4ae1, #5744e3, #513ee4, #4a38e6);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  border:1px solid black;
+  width:60%;
+  margin:20px auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+  border:1px solid red;
+  margin:10px;
 }
+.home_image{
+  border:1px solid black; 
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home_image img{
+  height:40vh;
+  width:100%;
+  object-fit:cover;
+}
+.homepage_data{
+  border:1px solid black;
+  margin:10px 0px;
+  height:40vh;
+}
+.username{
+  margin:10px;
+  border:1px solid yellow;
 }
