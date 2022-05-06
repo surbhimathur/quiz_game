@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function Result() {
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+
+function Result({name,score}) {
+  
+  const navigate=useNavigate;
+  
+  useEffect(() => {
+    
+  if(!name){
+ navigate("/");
+  }
+   
+    
+  }, [name,navigate]);
+  
   return (
-    <div>Result</div>
+    <div className="result">
+      <span className="result_title">
+        Final Score : {score}
+      </span>
+      <Button variant="contained" color="secondary" size="large" style={{ alignSelf:"center",marginTop:20}} href="/">
+        Go to Homepage
+      </Button>
+    </div>
   )
 }
 
