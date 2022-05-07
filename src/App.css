@@ -11,12 +11,20 @@ body{
 .App{
   /*background-image: linear-gradient(to top, #eaafc8, #e398c5, #d683c7, #c371cd, #a662d5, #955dd9, #8159de, #6756e3, #6756e3, #6756e3, #6756e3, #6756e3);*/
   background-image: linear-gradient(to top, #9d6eb2, #9968b9, #9263c0, #8a5ec8, #7f5ad0, #7756d5, #6e52da, #634fdf, #5d4ae1, #5744e3, #513ee4, #4a38e6);
+  background-repeat: no-repeat;
   height:100vh;
 }
 .header{
   border:1px solid black;
-  width:60%;
-  margin:20px auto;
+  width:95%; 
+  margin:10px auto;
+  text-align: center;
+}
+.header img{
+ width:90%;
+}
+.quiz_link{
+  text-decoration: none;
 }
 .container{
   border:1px solid red;
@@ -27,7 +35,7 @@ body{
 
 }
 .home_image img{
-  height:30vh;
+  height:auto;
   width:100%;
   object-fit:cover;
 }
@@ -37,8 +45,9 @@ body{
   
 }
 .username{
-  margin:10px 0px 20px 0px;
+  margin:10px auto 20px auto;
   border:1px solid yellow;
+  width:90%;
 }
 .categories{
   display:flex;
@@ -47,14 +56,16 @@ body{
   border:1px solid yellow;
   align-items:center;
   justify-content:space-between;
+  width:100%;
+  margin:0px auto;
 }
 .category{
   padding:10px 5px;
-  width:45%;
+  width:47%;
   background-color:#6043a0;
   border-radius:10px;
   text-align:center;
-  margin-bottom:10px;
+  margin-bottom:15px;
   cursor:pointer;
 }
 .category img{
@@ -66,6 +77,7 @@ body{
   letter-spacing:0.7px;
   font-weight:400;
   margin-left:10px;
+  
 }
 .buttons{
   width:100%;
@@ -74,10 +86,11 @@ body{
 }
 .select_category{
   border:1px solid red;
-  margin:0px 0px 15px 0px;
+  margin:0px auto 15px auto;
   color:white;
   letter-spacing:1px;
   font-weight:500;
+  
 }
 .category_data{
   display:flex;
@@ -92,7 +105,7 @@ body{
 }
 .welcome{
   width:80%;
-  margin:10px auto;
+  margin:10px auto 15px auto;
   border:1px solid pink;
   border-radius:10px;
   text-align:center;
@@ -118,22 +131,22 @@ body{
   font-family: 'Poppins', sans-serif;
   border:3px solid #49239d;
   border-radius:20px;
-  padding:5px 10px;
+  padding:0px 10px;
   background-color:#6043a0;
   text-transform:uppercase;
   font-size:14px;
 }
 .questions{
   border:1px solid yellow;
-  margin:10px auto;
+  margin:25px auto;
   width:100%;
   text-align:center;
 }
 .questions h2{
-  color:pink;
+  color:rgb(7, 6, 41);
   letter-spacing:1px;
   font-weight:500;
-  
+  text-decoration:underline;
   
 }
 .single_question{
@@ -142,10 +155,10 @@ body{
 }
 .options{
   border:1px solid white;
-  margin:10px ;
+  margin:20px auto ;
   display:flex;
   flex-direction:column;
- margin-top:15px;
+ 
 }
 .option_name{
   border:1px solid white;
@@ -154,17 +167,18 @@ body{
   border-radius:10px;
   text-align:center;
   margin-bottom:15px;
-  font-size:16px;
+  font-size:14px;
   font-family: 'Poppins', sans-serif;
   font-weight:500;
 }
 .question_name{
   text-align:center;
   color:white;
-  font-size:18px;
+  font-size:16px;
+  
 }
 .select{
-  background-color:yellow;
+  background-color:rgb(255, 196, 0);
   color:black;
 }
 .wrong{
@@ -188,4 +202,140 @@ body{
   font-size:40px;
   font-weight:bold;
   color:white;
+}
+
+
+@media(min-width:500px){
+  .categories{
+    width:90%; 
+  }
+  .select_category{
+    width:95%;
+  }
+  .category{
+    width:45%;
+  }
+  .home_image img{
+    margin:0px 10px;
+    width:95%;
+    
+  }
+}
+
+@media(min-width:600px){
+  .home_image img{
+    margin:0px 15px;
+    width:95%;  
+  }
+  .categories{
+    width:85%; 
+  }
+  .category{
+    width:43%;
+  }
+  .header img{
+    width:85%;
+   }
+   .home_image img{
+    height:50vh; 
+  }
+  input[type="radio"]{
+    width:30px;
+    height:20px;
+   }
+}
+
+@media(min-width:750px){
+  .header img{
+    width:80%;
+    height:25vh;
+   }
+   .username{
+    width:75%;
+    margin:10px auto 25px auto;
+  }
+  .categories{
+    width:100%; 
+  }
+  .category{
+    width:30%;
+  }
+  .header{
+    margin:10px auto 20px auto;
+  }
+  .container{
+    margin:25px 10px;
+  }
+  .home_image img{
+    margin:0px;
+    width:100%;
+    height:60vh;   
+  }
+  .homepage_data{
+    margin:20px 0px 10px 0px;
+    
+  }
+ 
+}
+@media(min-width:900px){
+  .header img{
+    width:75%;
+    
+   }
+   .categories{
+    width:90%; 
+  }
+  .home_image img{
+    height:55vh;   
+  }
+  .username{
+    width:70%;  
+  }
+}
+@media(min-width:1000px){
+  .header img{
+    width:70%;
+    height:30vh;   
+   }
+   .home_image img{
+    height:65vh; 
+    width:85%;      
+  }
+  .home_image{
+    text-align:center;
+  }
+  .username{
+    width:65%;  
+  }
+  .categories{
+    width:85%; 
+  }
+}
+@media(min-width:1200px){
+  .home_image img{
+    height:70vh; 
+      width:90%;
+  }
+  .username{
+    width:55%;  
+  }
+  .categories{
+    width:80%; 
+  }
+  .category{
+    margin-bottom:25px;
+  }
+}
+
+@media(min-width:1300px){
+  .home_image img{
+    height:80vh; 
+     
+  }
+  .username{
+    width:45%;  
+  }
+  .categories{
+    width:75%; 
+  }
 }

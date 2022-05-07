@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function Questions({currQues,setCurrQues,questions,options,correct,score,setScore,setQuestions}) {
     const [selected, setSelected] = useState();
     const [error, setError] = useState(false);
-    
+    var he =require('he');             // npm i he for installation
     const navigate =useNavigate();
     
     const handleSelect=(i)=>{
@@ -53,7 +53,7 @@ function Questions({currQues,setCurrQues,questions,options,correct,score,setScor
     <div className="questions">
         <h2>Question {currQues + 1}</h2>
         <div className="single_question">
-            <p className="question_name">{questions[currQues].question}</p>
+            <p className="question_name">{he.decode(questions[currQues].question)}</p>  {/*he.decode used for converting special codes('#120f) data coming from trivia api */} 
             <div className="options">
             {error && <ErrorMessage>Please fill all the fields</ErrorMessage>}
             {
@@ -65,10 +65,10 @@ function Questions({currQues,setCurrQues,questions,options,correct,score,setScor
             </div>
             
           <div className="controls">
-              <Button variant="contained" onClick={handleQuit}  style={{width:'40%',backgroundColor:"crimson",fontSize:"16px"}} href="/">
+              <Button variant="contained" onClick={handleQuit}  style={{width:'40%',backgroundColor:"crimson",fontSize:"16px", fontFamily: 'Cormorant Garamond',border:'2px solid white'}} href="/">
               Quit
               </Button>
-              <Button variant="contained" onClick={handleNext} style={{width:'55%',backgroundColor:"#6043a0",fontSize:"16px"}} >
+              <Button variant="contained" onClick={handleNext} style={{width:'55%',backgroundColor:"#6043a0",fontSize:"16px",fontFamily: 'Cormorant Garamond',border:'2px solid white'}} >
               Next Question
               </Button>
           </div>

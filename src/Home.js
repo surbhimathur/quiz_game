@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import ErrorMessage from "./ErrorMessage";
 import Quizimage from "../src/quizimage.webp";
 import TextField from '@mui/material/TextField';
+import bootstrap from 'bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 function Home({name,setName,fetchQuestions}) {
@@ -31,19 +32,20 @@ const navigate =useNavigate(); //using instead of useHistory
   return (
     <div className="container">
         <div className="row">
-            <div className="col-12 home_image">
+            <div className="home_image">
                 <img src={Quizimage} alt="quiz image"/>
             </div>
-            <div className="col-12 homepage_data">
+            <div className="homepage_data">
             {error && <ErrorMessage>Please fill all the fields</ErrorMessage>}
                 <div className="username">
                 <TextField  id="filled-basic" fullWidth label="Enter Your Name" variant="filled" 
                 style={{
-                  backgroundColor:'#a681b7',
-                  borderRadius:'10px' 
+                  backgroundColor:'white',
+                  borderRadius:'10px' ,
+                  
                 }}
                 InputLabelProps={{
-                style: { color: 'white' },
+                style: { color: '#6043a0', fontWeight:"bold"},
                  }}
                  onChange={(e)=>setName(e.target.value)}
                 />
@@ -64,9 +66,10 @@ const navigate =useNavigate(); //using instead of useHistory
                 </div>
                 <div className="buttons" size="large">
                   <Button variant="contained"  style={{
-                    backgroundColor:"#6043a0",
-                    fontFamily: 'Poppins', 
-                    fontSize:'18px',
+                    background: "linear-gradient(to right, #eb3349, #f45c43)",
+                    fontFamily:'Cormorant Garamond', 
+                    fontSize:'20px',
+                    border:'2px solid white'
                   }}
                   onClick={handleSubmit}>
                     Start Quiz

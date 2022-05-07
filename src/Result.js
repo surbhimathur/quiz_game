@@ -21,7 +21,7 @@ function Result({name,score}) {
       <span className="result_title">
         Final Score : {score}
       </span>
-      <Button variant="contained" color="secondary" size="large" style={{ alignSelf:"center",marginTop:20}} href="/">
+      <Button variant="contained" color="secondary" size="large" style={{ alignSelf:"center",marginTop:20,fontFamily:'Cormorant Garamond',fontSize:'18px',border:'2px solid white'}} href="/">
         Go to Homepage
       </Button>
     </div>
