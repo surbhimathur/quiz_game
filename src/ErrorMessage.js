@@ -1,3 +1,5 @@
+//when an error occurs this component is called
+
 const ErrorMessage=({children})=>{
     return(
         <div style={{

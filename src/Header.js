@@ -4,7 +4,7 @@ import headerimage from "../src/headerimage.png";
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header">        {/* header displayed on every page i.e. quiz name*/}
         <Link to='/' className="quiz_link">
           <img src={headerimage} alt="headerimage" />
         </Link>     

@@ -26,17 +26,17 @@ console.log(options);
   };
   
   return (
-    <div className="container quiz">
+    <div className="container quiz">    {/* quiz page */}
       <div className="welcome"> <h2>Welcome, {name}</h2></div>
       {
         questions ? (
           <>
-          <div className="quizinfo">
+          <div className="quizinfo">           {/* home page image box*/}
             <span>{questions[currQues].category}</span>
             <span>Score : {score}</span>
           </div>
-          
-          <Questions 
+          {/* question component*/}
+          <Questions        
             currQues={currQues} 
             setCurrQues={setCurrQues}
             questions={questions}
@@ -47,7 +47,7 @@ console.log(options);
             setQuestions={setQuestions}
           />
         </>
-        ):(<CircularProgress style={{margin:100}} color="warning" size={100} thickness={2} />
+        ):(<CircularProgress style={{margin:'50%'}} color="warning" size={100} thickness={2} />
         
         )}
     </div>
